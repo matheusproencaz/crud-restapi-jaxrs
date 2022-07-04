@@ -1,0 +1,8 @@
+serviceDesk\dao\impl\UserDAO.class
+serviceDesk\resources\UserResource$1.class
+serviceDesk\dao\IUserDAO.class
+serviceDesk\model\User.class
+serviceDesk\resources\UserResource$2.class
+serviceDesk\Utils\JPAUtil.class
+serviceDesk\resources\UserResource.class
+serviceDesk\Utils\JPAUtil$PopulatingDatabase.class
