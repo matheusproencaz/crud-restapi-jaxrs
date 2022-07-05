@@ -13,7 +13,7 @@ public class UserDAO implements IUserDAO<User, Long>{
 
 	private EntityManager em = JPAUtil.getInstance().getEntityManager();
 	
-	public void saveOrUpdate(User user) throws Exception{
+	public User saveOrUpdate(User user) throws Exception{
 		try {
 			em.getTransaction().begin();
 			
@@ -25,10 +25,11 @@ public class UserDAO implements IUserDAO<User, Long>{
 						throw new Exception("Erro ao atualizar local");
 					}
 				}
-				em.merge(user);		
+				em.merge(user);
 			} 
 			em.getTransaction().commit();
-			
+
+			return user;
 		} finally {
 			em.close();	
 		}

@@ -3,9 +3,11 @@ package serviceDesk.dao;
 import java.io.Serializable;
 import java.util.List;
 
+import serviceDesk.model.User;
+
 public interface IUserDAO<T, PK extends Serializable>{
 
-	void saveOrUpdate(T Users) throws Exception;
+	User saveOrUpdate(T Users) throws Exception;
 	
 	void delete(PK id);
 	
